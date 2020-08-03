@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import {BMI_CALCULATION_API} from '../constants'
 
 interface State{
     height: number;
@@ -7,7 +8,6 @@ interface State{
     bmi: string;
     errorMessage: string;
 }
-
 
 class FormComponent extends React.Component<{}, State> {
     constructor(props={}) {
@@ -31,7 +31,7 @@ class FormComponent extends React.Component<{}, State> {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ height: height, weight: weight })
             };
-            fetch('http://localhost:5000/calculate_bmi', bmiParameter)
+            fetch(BMI_CALCULATION_API, bmiParameter)
                 .then(async response => {
                     const data = await response.json()
                     if (!response.ok) {
