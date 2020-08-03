@@ -2,6 +2,29 @@
   text-align: center;
 }
 
+.App input {
+    padding: 4px;
+    margin: 8px;
+    border: 2px solid white;
+}
+
+.App button {
+    border: none;
+    background: white;
+    padding: 6px;
+    margin: 8px;
+}
+
+.App .Form-container {
+    padding-top: 16px;
+}
+
+.result {
+    font-size: calc(10px + 2vmin);
+    padding-top: 16px;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
